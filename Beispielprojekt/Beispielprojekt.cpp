@@ -16,16 +16,23 @@ public:
 	// dann werden `draw` Aufrufe ausgelassen und die Framerate sinkt
 	void draw() override
 	{
-		graphics().draw_line(
-			10, 20, Gosu::Color::RED,
+
+		Gosu::Graphics::draw_triangle(
+			x, y, Gosu::Color::RED,
 			200, 100, Gosu::Color::GREEN,
+			200, 400, Gosu::Color::BLUE,
 			0.0
 		);
 	}
+	double x = 0;
+	double y = 0;
 
 	// Wird 60x pro Sekunde aufgerufen
 	void update() override
 	{
+
+		x = input().mouse_x();
+		y = input().mouse_y();
 	}
 };
 
