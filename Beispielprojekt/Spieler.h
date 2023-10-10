@@ -15,6 +15,7 @@ public:
 	void set_Postion_X_minus();
 	void set_Postion_Y_plus();
 	void set_Postion_Y_minus();
+	
 
 };
 
